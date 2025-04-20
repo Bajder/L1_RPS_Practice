@@ -1,18 +1,23 @@
 # Check for an integer more than 0, also allows <enter>
 def int_check(to_check):
     """Checks users enter an integer that is 1 or more."""
-    # Error message
-    error = f"Please enter an integer that is 1 or more.."
     # User input
     while True:
+        # Error message
+        error = f"Please enter an integer that is 1 or more.."
+
+        
+        # Check for infinite mode
+        if to_check == "":
+           return "infinite"
         try:
-            response = int(input("Enter an integer: "))
+            response = int(to_check)
             if response < 1:
-                print(error)
+               # print(error)
             else:
                 return response
         except ValueError:
-            print(error)
+          # print(error)
 
 
 # Automated testing is below in the form (test_case, expected_value)
