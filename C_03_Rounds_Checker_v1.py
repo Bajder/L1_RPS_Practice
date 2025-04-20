@@ -1,13 +1,13 @@
-# Check that users have entered a valid option based on a list
-def int_check():
-    """Checks users enter an integer more than / equal to 13"""
+# Check for an integer more than 0, also allows <enter>
+def int_check(to_check):
+    """Checks users enter an integer that is 1 or more."""
     # Error message
-    error = f"Please enter an integer more than / equal to 13."
+    error = f"Please enter an integer that is 1 or more.."
     # User input
     while True:
         try:
-            response = int(input("What is the game goal? "))
-            if response < 13:
+            response = int(input("Enter an integer: "))
+            if response < 1:
                 print(error)
             else:
                 return response
