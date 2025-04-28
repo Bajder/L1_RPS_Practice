@@ -6,18 +6,19 @@ def int_check(to_check):
         # Error message
         error = f"Please enter an integer that is 1 or more.."
 
-        
         # Check for infinite mode
         if to_check == "":
-           return "infinite"
+            return "infinite"
         try:
             response = int(to_check)
             if response < 1:
                # print(error)
+               return "invalid"
             else:
-                return response
+              return response
         except ValueError:
-          # print(error)
+             # print(error)
+             return "invalid"
 
 
 # Automated testing is below in the form (test_case, expected_value)
@@ -25,8 +26,8 @@ to_test = [
     ("xlii", "invalid"),
     ("0.5", "invalid"),
     ("0", "invalid"),
-    ("1", "1"),
-    ("2", "2"),
+    (1, 1),
+    (2, 2),
     ("", "infinite")
 ]
 
