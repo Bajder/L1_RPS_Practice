@@ -38,21 +38,28 @@ print()
 num_rounds = int_check("How many rounds would you like? Push <enter> for infinite mode: ")
 if num_rounds == "infinite":
     mode = "infinite"
-    print("you chose infinite")
     num_rounds = 5
 # Game loop starts here
 while rounds_played < num_rounds:
+
+    # Rounds headings
+    if mode =="infinite":
+        rounds_heading = f"\n∞∞∞ Round {rounds_played} (Infinite Mode) ∞∞∞"
+    else:
+        rounds_heading = f"\n Round {rounds_played} of {num_rounds}"
+
+    print(rounds_heading)
+    print()
     users_choice = input("Choose: ")
 
     if users_choice == "xxx":
         break
     rounds_played += 1
-    print("Rounds played: ", rounds_played)
+
     # if users are in infinite mode, increase number of rounds
     if mode == "infinite":
         num_rounds += 1
 
-    print("Number of rounds: ", num_rounds)
 
 
 # Game loop ends here
