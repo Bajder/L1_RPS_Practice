@@ -17,8 +17,24 @@ def string_checker(question, valid_ans=("yes", "no")):
         print(error)
         print()
 
+# Displays instructions
 
-# Main routine starts here
+def instructions():
+    """ Prints the instructions for the user """
+    print("""
+*** Instructions ****
+
+To begin, choose the number of rounds (or press enter for infinite mode).
+
+The play against the computer. You need to choose on of the following: R (rock), P (paper), or S (scissors).
+
+The rules are as follows:
+o  Paper beats rock
+o  Rock beats scissors
+o  Scissors beats paper
+
+Good Luck!
+    """)
 
 rps_list = ["rock", "paper", "scissors", "xxx"]
 
