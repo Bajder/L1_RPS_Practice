@@ -27,7 +27,7 @@ def instructions():
 
 To begin, choose the number of rounds (or press enter for infinite mode).
 
-The play against the computer. You need to choose on of the following: R (rock), P (paper), or S (scissors).
+The play against the computer. You need to choose one of the following: R (rock), P (paper), or S (scissors).
 
 The rules are as follows:
 o  Paper beats rock
